@@ -1,0 +1,18 @@
+@use "../Base/mixins";
+
+.skillsContainer {
+  @include mixins.flex-center;
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+  .skillsFlex {
+    width: 70%;
+    @include mixins.flex-between;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+    button {
+      @include mixins.skills-btn;
+    }
+  }
+}

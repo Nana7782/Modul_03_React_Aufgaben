@@ -1,0 +1,15 @@
+@use "../Base/mixins";
+
+.header {
+  @include mixins.flex-between;
+  nav {
+    width: 40vw;
+    @include mixins.flex-between;
+    a {
+      text-decoration: none;
+      color: #61dbfb;
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+}

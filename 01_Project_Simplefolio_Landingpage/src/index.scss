@@ -1,0 +1,48 @@
+@use "../src/scss/Base/mixins";
+@use "../src/scss/Modules/header";
+@use "../src/scss/Modules/intro";
+@use "../src/scss/Modules/projects";
+@use "../src/scss/Modules/skills";
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+h2 {
+  text-transform: uppercase;
+  color: azure;
+}
+.mainContainer {
+  margin: 2rem;
+}
+
+.btn {
+  @include mixins.btn;
+}
+
+.contact {
+  @include mixins.flex-center;
+  margin-top: 5rem;
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+}
