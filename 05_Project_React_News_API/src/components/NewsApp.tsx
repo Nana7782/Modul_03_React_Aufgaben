@@ -14,7 +14,7 @@ function NewsApp() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("en");
   const [news, setNews] = useState<INewsArticle[]>([]);
-  const apiKey = "c2f6d9f1dac946a5919ba9181d556e86";
+  const apiKey = import.meta.env.VITE_API_KEY;
 
   const [shouldFetchNews, setShouldFetchNews] = useState(false);
 
