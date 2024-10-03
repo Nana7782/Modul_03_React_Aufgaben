@@ -20,15 +20,22 @@
 a {
   text-decoration: none;
 }
-#container {
-  margin: 0 auto;
-  width: 90vw;
+.main-container {
+  margin: 16px auto;
+  width: 80vw;
+}
+.start {
+  padding: 5px;
 }
 .emotion-image {
   margin: 10px 0;
-
+  height: 80vh;
   display: flex;
   flex-direction: column;
+}
+.emotion-image p {
+  font-size: 18px;
+  font-weight: 500;
 }
 .image {
   object-fit: cover;
@@ -36,7 +43,8 @@ a {
   overflow: hidden;
 }
 
-.button {
+.button,
+.detail-button {
   background-color: #ffca41;
   color: white;
   font-family: RobotoSlab;
@@ -49,7 +57,14 @@ a {
   cursor: pointer;
 }
 
-.button:hover {
+.detail-button {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 2px 20px;
+  border-radius: 40px;
+}
+
+.button:hover .detail-button:hover {
   background-color: #d09e20;
 }
 .beer-card {
@@ -71,6 +86,59 @@ a {
   height: 95%;
 }
 
+.beer-details p {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 19px;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 500;
+}
 h3 {
   color: #ffca41;
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 13px;
+}
+.detail-container {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.detail-container h2 {
+  font-size: 52px;
+  margin-top: 24px;
+}
+.brewdetail {
+  font-size: 13px;
+  color: #33333380;
+  display: flex;
+  justify-content: space-between;
+}
+.detail-image {
+  width: 50vw;
+}
+
+.description {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 24px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
+  text-align: center;
+}
+.logo {
+  margin-top: 10px;
 }

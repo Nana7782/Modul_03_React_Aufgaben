@@ -3,7 +3,7 @@ import RandomBeerCard from "../components/RandomBeerCard";
 
 export default function Homepage() {
   return (
-    <div>
+    <div className="main-container">
       <AllBeerCard />
       <RandomBeerCard />
     </div>

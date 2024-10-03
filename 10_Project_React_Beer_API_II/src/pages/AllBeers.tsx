@@ -24,7 +24,7 @@ export default function AllBeers() {
   }
 
   return (
-    <div>
+    <div className="main-container">
       {beerQuery.data.map((beer) => (
         <div key={beer._id} className="beer-card">
           <img src={beer.image_url} alt={beer.name} className="detail-image" />
@@ -32,7 +32,9 @@ export default function AllBeers() {
             <h2>{beer.name}</h2>
             <h3>{beer.tagline}</h3>
             <p>{beer.contributed_by}</p>
-            <NavLink to={beer._id}>Details</NavLink>
+            <NavLink to={beer._id} className="detail-button">
+              Details
+            </NavLink>
           </div>
         </div>
       ))}

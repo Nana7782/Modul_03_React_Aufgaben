@@ -2,6 +2,7 @@ import IBeer from "../interfaces/IBeer";
 import { useQuery } from "@tanstack/react-query";
 import { BASE_URL } from "./AllBeers";
 import Footer from "../components/Footer";
+import { NavLink } from "react-router-dom";
 
 export default function RandomBeer() {
   const fetchRandomBeer = async () => {
@@ -10,30 +11,33 @@ export default function RandomBeer() {
     return data;
   };
 
-  const randomBeerQuery = useQuery<IBeer>({
+  const beerQuery = useQuery<IBeer>({
     queryKey: ["randomBeer"],
     queryFn: () => fetchRandomBeer(),
   });
-  if (randomBeerQuery.isError) {
+  if (beerQuery.isError) {
     return "Sorry, no beers to show";
   }
-  if (randomBeerQuery.isPending) {
+  if (beerQuery.isPending) {
     return "Loading beers...";
   }
 
   return (
-    <div>
-      {randomBeerQuery && (
+    <div className="main-container">
+      {beerQuery && (
         <div className="beer-card">
           <img
-            src={randomBeerQuery.data.image_url}
-            alt={randomBeerQuery.data.name}
+            src={beerQuery.data.image_url}
+            alt={beerQuery.data.name}
             className="detail-image"
           />
           <div className="beer-details">
-            <h2>{randomBeerQuery.data.name}</h2>
-            <h3>{randomBeerQuery.data.tagline}</h3>
-            <p>{randomBeerQuery.data.contributed_by}</p>
+            <h2>{beerQuery.data.name}</h2>
+            <h3>{beerQuery.data.tagline}</h3>
+            <p>{beerQuery.data.contributed_by}</p>
+            {/* <NavLink to={beer._id} className="detail-button">
+              Details
+            </NavLink> */}
           </div>
         </div>
       )}
