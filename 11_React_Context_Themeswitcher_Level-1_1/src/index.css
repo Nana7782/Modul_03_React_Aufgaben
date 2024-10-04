@@ -16,6 +16,7 @@ html,
 body,
 #root {
   height: 100%;
+  margin: 0;
 }
 
 .theme {
@@ -25,4 +26,24 @@ body,
 .theme--dark {
   background-color: #222;
   color: white;
+}
+header {
+  text-align: right;
+  padding: 20px;
+}
+
+.content {
+  padding: 0 50px;
+}
+section {
+  display: flex;
+}
+article {
+  width: 50%;
+  padding: 0 10px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
 }
