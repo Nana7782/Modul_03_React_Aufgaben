@@ -32,7 +32,7 @@ export default function AllBeers() {
             <h2>{beer.name}</h2>
             <h3>{beer.tagline}</h3>
             <p>{beer.contributed_by}</p>
-            <NavLink to={beer._id} className="detail-button">
+            <NavLink to={"/beers/" + beer._id} className="detail-button">
               Details
             </NavLink>
           </div>

@@ -119,9 +119,6 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
-.detail-image {
-  width: 50vw;
-}
 
 .description {
   font-size: 15px;

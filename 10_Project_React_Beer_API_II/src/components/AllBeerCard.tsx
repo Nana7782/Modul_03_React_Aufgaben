@@ -7,7 +7,7 @@ function AllBeerCard() {
       <div className="start">
         <div className="emotion-image">
           <img src={allbeers} alt="loads of beers" className="image" />
-          <NavLink to={"/beers/all"} className="button">
+          <NavLink to={"/beers/"} className="button">
             All Beers
           </NavLink>
           <p>

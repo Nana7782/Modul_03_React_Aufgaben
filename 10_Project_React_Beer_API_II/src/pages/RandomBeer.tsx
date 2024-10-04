@@ -35,9 +35,12 @@ export default function RandomBeer() {
             <h2>{beerQuery.data.name}</h2>
             <h3>{beerQuery.data.tagline}</h3>
             <p>{beerQuery.data.contributed_by}</p>
-            {/* <NavLink to={beer._id} className="detail-button">
+            <NavLink
+              to={"/beers/" + beerQuery.data._id}
+              className="detail-button"
+            >
               Details
-            </NavLink> */}
+            </NavLink>
           </div>
         </div>
       )}
