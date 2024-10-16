@@ -14,7 +14,25 @@ export default function App() {
     ) {
       alert(`Alles Gute zum Geburtstag, ${vornameRef.current?.value}!`);
     } else {
-      alert(`Heute ist leider nicht dein Geburtstag`);
+      // alert(`Heute ist leider nicht dein Geburtstag`);
+
+      //! Berechnung des Zeitraums zum naechsten Gebutrstag
+      // ? aktuell keine Beruecksichtigung von Schaltjahren
+
+      const naechsterGeburtstag = new Date(
+        heutigesDatum.getFullYear(),
+        inputDatum.getMonth(),
+        inputDatum.getDate()
+      );
+      if (naechsterGeburtstag < heutigesDatum) {
+        naechsterGeburtstag.setFullYear(naechsterGeburtstag.getFullYear() + 1);
+      }
+      const diffInMillisek =
+        naechsterGeburtstag.getTime() - heutigesDatum.getTime();
+      const diffInTagen = Math.round(diffInMillisek / (1000 * 60 * 60 * 24));
+      alert(
+        `Noch ${diffInTagen} Tage bis zu deinem Geburtstag, ${vornameRef.current?.value}`
+      );
     }
     vornameRef.current!.value = "";
     gebDatumRef.current!.value = "";
