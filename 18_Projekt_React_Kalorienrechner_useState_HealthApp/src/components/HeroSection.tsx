@@ -1,7 +1,9 @@
+import heroImage from "../assets/img/heroImage.png";
+
 export default function HeroSection() {
   return (
     <div>
-      <img src="" alt="" />
+      <img src={heroImage} alt="young happy woman in sportsdress" />
       <section>
         <h3>Transorm Your ❤️ Health with</h3>
         <h1>Personaliued Nutrition Coaching</h1>
